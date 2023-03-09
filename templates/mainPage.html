@@ -1,0 +1,19 @@
+{% extends 'basePage.html' %}
+{% block title %}Main{% endblock %}
+{% block content %} 
+<div class="login-dark p-3 mt-5">
+  {% for post in posts %}
+        <div class="card mb-3">
+          <div class="card-header">
+            {{ post.author }}
+            <small class="text-muted">{{ post.date_posted }}</s     mall>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.content }}</p>
+          </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
